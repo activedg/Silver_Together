@@ -20,7 +20,7 @@
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
         <!-- Text Color and Font. -->
         <item name="android:textColor">@color/black</item>
-        <item name="fontFamily">@font/applegothic_regular</item>
+        <item name="fontFamily">@font/app_font</item>
     </style>
 
     <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
@@ -44,6 +44,6 @@
     <!-- active tab icon style -->
     <style name="TextAppearance.BottomNavigationView.Active">
         <item name="android:textSize">20dp</item>
-        <item name="fontFamily">@font/applegothic_bold</item>
+        <item name="fontFamily">@font/notosans_bold</item>
     </style>
 </resources>
