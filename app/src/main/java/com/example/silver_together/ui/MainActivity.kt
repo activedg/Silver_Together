@@ -6,36 +6,36 @@ import com.example.silver_together.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun initView() {
-        binding.mainBottomNav.apply {
-            itemActiveIndicatorColor = getColorStateList(R.color.color_st)
-        }
         initBottomNavigation()
     }
+
     private fun initBottomNavigation(){
         // 메인 화면으로 시작
-        binding.mainBottomNav.selectedItemId = R.id.bottom_nav_main
         goSelectedPage(1)
-
-        binding.mainBottomNav.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.bottom_nav_group -> {
-                    goSelectedPage(0)
-                    return@setOnItemSelectedListener true
+        binding.mainBottomNav.apply {
+            itemActiveIndicatorColor = getColorStateList(R.color.color_st)
+            selectedItemId = R.id.bottom_nav_main
+            setOnItemSelectedListener {
+                when(it.itemId){
+                    R.id.bottom_nav_group -> {
+                        goSelectedPage(0)
+                        return@setOnItemSelectedListener true
+                    }
+                    R.id.bottom_nav_main -> {
+                        goSelectedPage(1)
+                        return@setOnItemSelectedListener true
+                    }
+                    R.id.bottom_nav_mission -> {
+                        goSelectedPage(2)
+                        return@setOnItemSelectedListener true
+                    }
+                    R.id.bottom_nav_setting -> {
+                        goSelectedPage(3)
+                        return@setOnItemSelectedListener true
+                    }
                 }
-                R.id.bottom_nav_main -> {
-                    goSelectedPage(1)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.bottom_nav_mission -> {
-                    goSelectedPage(2)
-                    return@setOnItemSelectedListener true
-                }
-                R.id.bottom_nav_setting -> {
-                    goSelectedPage(3)
-                    return@setOnItemSelectedListener true
-                }
+                false
             }
-            false
         }
     }
 
@@ -47,5 +47,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                 2 -> MissionFragment()
                 else -> SettingFragment()
             }).commitAllowingStateLoss()
+    }
+
+    fun setSelectedItem(index: Int){
+        binding.mainBottomNav.selectedItemId = when(index){
+            0 -> R.id.bottom_nav_group
+            1 -> R.id.bottom_nav_main
+            2 -> R.id.bottom_nav_mission
+            else -> R.id.bottom_nav_setting
+        }
     }
 }
