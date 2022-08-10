@@ -7,5 +7,5 @@
     <font
         android:font="@font/notosans_medium"
         android:fontStyle="normal"
-        android:fontWeight="400" />
+        android:fontWeight="500" />
 </font-family>

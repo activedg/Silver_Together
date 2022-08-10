@@ -8,7 +8,7 @@ import com.example.silver_together.R
 import com.example.silver_together.data.User
 import com.example.silver_together.databinding.ItemUserBinding
 
-class HomeUserRVAdapter() : RecyclerView.Adapter<HomeUserRVAdapter.ViewHolder>() {
+class HomeUserRVAdapter(private val width: Int) : RecyclerView.Adapter<HomeUserRVAdapter.ViewHolder>() {
     private var userList = ArrayList<User>()
     private lateinit var binding: ItemUserBinding
 
@@ -31,6 +31,7 @@ class HomeUserRVAdapter() : RecyclerView.Adapter<HomeUserRVAdapter.ViewHolder>()
     inner class ViewHolder(binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User){
             with(binding){
+                layoutItemUser.layoutParams = ViewGroup.LayoutParams(width, 144)
                 user.imgRes?.let { ivItemUserProfile.setImageResource(it) }
                 tvItemUserName.text = user.name
             }

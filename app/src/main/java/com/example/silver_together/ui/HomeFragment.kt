@@ -1,7 +1,12 @@
 package com.example.silver_together.ui
 
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.View
+import android.view.WindowInsets
+import android.view.WindowManager
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.silver_together.R
@@ -22,7 +27,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 (activity as MainActivity).setSelectedItem(2)
             }
             rvHomeGroupPeople.apply {
-                adapter = HomeUserRVAdapter().apply {
+                adapter = HomeUserRVAdapter(getScreenWidth()/ 2).apply {
                     setData(initDummyData())
                 }
                 layoutManager = GridLayoutManager(context, 3, LinearLayoutManager.HORIZONTAL, false)
@@ -44,5 +49,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             add(User("김서연", null))
         }
         return tempList
+    }
+
+    private fun getScreenWidth(): Int{
+        val wm = activity?.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            val size = wm.currentWindowMetrics
+            val deviceWidth = size.bounds.width()
+            deviceWidth
+        } else {
+            val displayMetrics = DisplayMetrics()
+            wm.defaultDisplay.getMetrics(displayMetrics)
+            displayMetrics.widthPixels
+        }
     }
 }
