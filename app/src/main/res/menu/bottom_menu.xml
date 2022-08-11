@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/bottom_nav_group"
-        android:title="그룹"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/bottom_nav_main"
         android:title="메인"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_nav_group"
+        android:title="그룹"
         app:showAsAction="always" />
     <item
         android:id="@+id/bottom_nav_mission"
         android:title="미션"
         app:showAsAction="always" />
     <item
-        android:id="@+id/bottom_nav_setting"
-        android:title="설정"
+        android:id="@+id/bottom_nav_profile"
+        android:title="내 정보"
         app:showAsAction="always" />
 </menu>

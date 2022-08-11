@@ -11,17 +11,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
 
     private fun initBottomNavigation(){
         // 메인 화면으로 시작
-        goSelectedPage(1)
+        goSelectedPage(0)
         binding.mainBottomNav.apply {
             itemActiveIndicatorColor = getColorStateList(R.color.color_st)
             selectedItemId = R.id.bottom_nav_main
             setOnItemSelectedListener {
                 when(it.itemId){
-                    R.id.bottom_nav_group -> {
+                    R.id.bottom_nav_main -> {
                         goSelectedPage(0)
                         return@setOnItemSelectedListener true
                     }
-                    R.id.bottom_nav_main -> {
+                    R.id.bottom_nav_group -> {
                         goSelectedPage(1)
                         return@setOnItemSelectedListener true
                     }
@@ -29,7 +29,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                         goSelectedPage(2)
                         return@setOnItemSelectedListener true
                     }
-                    R.id.bottom_nav_setting -> {
+                    R.id.bottom_nav_profile -> {
                         goSelectedPage(3)
                         return@setOnItemSelectedListener true
                     }
@@ -42,10 +42,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     private fun goSelectedPage(pageIdx: Int){
         supportFragmentManager.beginTransaction()
             .replace(R.id.main_frm, when(pageIdx) {
-                0 -> GroupFragment()
-                1 -> HomeFragment()
+                0 -> HomeFragment()
+                1 -> GroupFragment()
                 2 -> MissionFragment()
-                else -> SettingFragment()
+                else -> ProfileFragment()
             }).commitAllowingStateLoss()
     }
 

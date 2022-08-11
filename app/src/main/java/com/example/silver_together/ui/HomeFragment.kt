@@ -33,7 +33,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
                 layoutManager = GridLayoutManager(context, 3, LinearLayoutManager.HORIZONTAL, false)
             }
             tvHomeGroupMore.setOnClickListener {
-                (activity as MainActivity).setSelectedItem(0)
+                (activity as MainActivity).setSelectedItem(1)
             }
         }
     }

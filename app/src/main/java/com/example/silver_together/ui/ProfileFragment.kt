@@ -4,5 +4,5 @@ import com.example.silver_together.R
 import com.example.silver_together.base.BaseFragment
 import com.example.silver_together.databinding.FragmentSettingBinding
 
-class SettingFragment : BaseFragment<FragmentSettingBinding>(R.layout.fragment_setting) {
+class ProfileFragment : BaseFragment<FragmentSettingBinding>(R.layout.fragment_setting) {
 }
