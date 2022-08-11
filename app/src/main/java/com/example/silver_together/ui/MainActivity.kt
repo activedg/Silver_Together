@@ -3,6 +3,8 @@ package com.example.silver_together.ui
 import com.example.silver_together.R
 import com.example.silver_together.base.BaseActivity
 import com.example.silver_together.databinding.ActivityMainBinding
+import com.example.silver_together.ui.home.HomeFragment
+import com.example.silver_together.ui.mission.MissionTabFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun initView() {
@@ -44,7 +46,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             .replace(R.id.main_frm, when(pageIdx) {
                 0 -> HomeFragment()
                 1 -> GroupFragment()
-                2 -> MissionFragment()
+                2 -> MissionTabFragment()
                 else -> ProfileFragment()
             }).commitAllowingStateLoss()
     }
@@ -54,7 +56,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
             0 -> R.id.bottom_nav_group
             1 -> R.id.bottom_nav_main
             2 -> R.id.bottom_nav_mission
-            else -> R.id.bottom_nav_setting
+            else -> R.id.bottom_nav_profile
         }
     }
 }

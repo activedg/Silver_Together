@@ -1,11 +1,10 @@
-package com.example.silver_together.ui
+package com.example.silver_together.ui.home
 
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
-import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +13,7 @@ import com.example.silver_together.adapter.HomeUserRVAdapter
 import com.example.silver_together.base.BaseFragment
 import com.example.silver_together.data.User
 import com.example.silver_together.databinding.FragmentHomeBinding
+import com.example.silver_together.ui.MainActivity
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

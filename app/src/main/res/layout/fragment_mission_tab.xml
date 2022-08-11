@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="실버 투게더"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:background="@color/light_grey"
+        android:paddingStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tab_summary"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_name">
+        <ImageView
+            android:id="@+id/iv_tab_summary"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_mission_visit"
+            android:scaleType="fitXY"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/tv_tab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="방문"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="top"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="@id/iv_tab_summary"
+            app:layout_constraintBottom_toTopOf="@id/tv_tab_detail"
+            app:layout_constraintStart_toEndOf="@id/iv_tab_summary"/>
+        <TextView
+            android:id="@+id/tv_tab_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/visit_tab"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/tv_tab_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_tab_name"
+            app:layout_constraintBottom_toBottomOf="@id/iv_tab_summary"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_mission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:background="@color/light_grey"
+        app:layout_constraintTop_toBottomOf="@id/layout_tab_summary"
+        app:tabRippleColor="@color/transparent"
+        app:tabIndicatorFullWidth="true"/>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_mission"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_mission"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -16,6 +16,7 @@
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowFullscreen">false</item>
+        <item name="android:includeFontPadding">false</item>
 
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
         <!-- Text Color and Font. -->
