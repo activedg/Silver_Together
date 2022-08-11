@@ -31,7 +31,7 @@ class HomeUserRVAdapter(private val width: Int) : RecyclerView.Adapter<HomeUserR
     inner class ViewHolder(binding: ItemUserBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User){
             with(binding){
-                layoutItemUser.layoutParams = ViewGroup.LayoutParams(width, 144)
+                layoutItemUser.layoutParams = ViewGroup.LayoutParams(width, 156)
                 user.imgRes?.let { ivItemUserProfile.setImageResource(it) }
                 tvItemUserName.text = user.name
             }
