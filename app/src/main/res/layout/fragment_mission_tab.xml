@@ -50,6 +50,7 @@
             android:layout_height="wrap_content"
             android:text="@string/visit_tab"
             android:textSize="20sp"
+            android:textColor="@color/grey_text"
             app:layout_constraintStart_toStartOf="@id/tv_tab_name"
             app:layout_constraintTop_toBottomOf="@id/tv_tab_name"
             app:layout_constraintBottom_toBottomOf="@id/iv_tab_summary"/>
@@ -67,6 +68,7 @@
         android:id="@+id/vp_mission"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         app:layout_constraintTop_toBottomOf="@id/tab_mission"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
