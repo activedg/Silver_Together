@@ -60,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/light_grey"
+        android:overScrollMode="never"
         app:tabTextAppearance="@style/tab_text"
         app:layout_constraintTop_toBottomOf="@id/layout_tab_summary"
         app:tabRippleColor="@color/transparent"

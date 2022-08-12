@@ -1,6 +1,7 @@
 package com.example.silver_together.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -38,6 +39,8 @@ class MissionRVAdapter : RecyclerView.Adapter<MissionRVAdapter.ViewHolder>() {
                 tvItemPlace.text = mission.place
                 tvItemDetail.text = mission.detail
                 ivItemMission.setImageResource(mission.imageRes)
+                if (mission.meatPlace == null) tvItemRoadPlace.visibility = View.INVISIBLE
+                else tvItemRoadPlace.text = mission.meatPlace
             }
         }
     }

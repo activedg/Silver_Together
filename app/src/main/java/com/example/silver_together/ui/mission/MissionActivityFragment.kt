@@ -18,21 +18,21 @@ class MissionActivityFragment : BaseFragment<FragmentMissionActivityBinding>(R.l
 
     private fun initView(){
         with(binding){
-            rvVisitTogether.adapter = MissionRVAdapter().apply {
+            rvActivityTogether.adapter = MissionRVAdapter().apply {
                 setData(ArrayList<Mission>().apply {
-                    add(Mission("까망돌 도서관", "흑석동의 대표 도서관", R.drawable.ic_library1))
-                    add(Mission("고구 동산", "흑석동의 공원이자\n서울의 야경 명소", R.drawable.ic_gogu))
+                    add(Mission("2018 하반기 독서정담", "치매예방 독서 프로그램\n서울도서관", null, R.drawable.ic_read))
+                    add(Mission("특수판매 피해예방교육", "다단계 사기 피해 방지교육\n서울노인복지센터", null, R.drawable.ic_edu))
                 })
             }
-            rvVisitTogether.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            rvActivityTogether.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-            rvVisitRecommend.adapter = MissionRVAdapter().apply {
+            rvActivityRecommend.adapter = MissionRVAdapter().apply {
                 setData(ArrayList<Mission>().apply {
-                    add(Mission("흑석 체육 센터", "탁 트인 한강이 보이는\n종합 운동 시설", R.drawable.ic_gym))
-                    add(Mission("김영삼 도서관", "상도동의 대표 도서관", R.drawable.ic_library2))
+                    add(Mission("산책", "어디든 좋아요,\n팀원들과 함께 걸어요", null, R.drawable.ic_walk))
+                    add(Mission("무료 심리상담", "당신의 고민을 풀어내세요\n상도1동 경로당", null, R.drawable.ic_test))
                 })
             }
-            rvVisitRecommend.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            rvActivityRecommend.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         }
     }
 }

@@ -40,6 +40,16 @@
         android:textColor="@color/grey_text"
         app:layout_constraintTop_toBottomOf="@id/tv_item_place"
         app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tv_item_road_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:textSize="15sp"
+        android:textColor="@color/color_st"
+        android:text="도로명 주소"
+        app:layout_constraintTop_toBottomOf="@id/tv_item_detail"
+        app:layout_constraintStart_toStartOf="@id/tv_item_detail"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

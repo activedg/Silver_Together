@@ -20,16 +20,16 @@ class MissionVisitFragment : BaseFragment<FragmentMissionVisitBinding>(R.layout.
         with(binding){
             rvVisitTogether.adapter = MissionRVAdapter().apply {
                 setData(ArrayList<Mission>().apply {
-                    add(Mission("까망돌 도서관", "흑석동의 대표 도서관", R.drawable.ic_library1))
-                    add(Mission("고구 동산", "흑석동의 공원이자\n서울의 야경 명소", R.drawable.ic_gogu))
+                    add(Mission("까망돌 도서관", "흑석동의 대표 도서관", null, R.drawable.ic_library1))
+                    add(Mission("고구 동산", "흑석동의 공원이자\n서울의 야경 명소", null, R.drawable.ic_gogu))
                 })
             }
             rvVisitTogether.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
             rvVisitRecommend.adapter = MissionRVAdapter().apply {
                 setData(ArrayList<Mission>().apply {
-                    add(Mission("흑석 체육 센터", "탁 트인 한강이 보이는\n종합 운동 시설", R.drawable.ic_gym))
-                    add(Mission("김영삼 도서관", "상도동의 대표 도서관", R.drawable.ic_library2))
+                    add(Mission("흑석 체육 센터", "탁 트인 한강이 보이는\n종합 운동 시설", null, R.drawable.ic_gym))
+                    add(Mission("김영삼 도서관", "상도동의 대표 도서관", null, R.drawable.ic_library2))
                 })
             }
             rvVisitRecommend.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
