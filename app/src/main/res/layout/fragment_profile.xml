@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/iv_profile_bg"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="220dp"
         android:src="@drawable/bg_profile"
         android:scaleType="fitXY"
         android:alpha="0.8"
@@ -133,22 +133,28 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/grey_line"
             android:weightSum="2"
             android:layout_weight="1" >
             <TextView
                 android:layout_width="0dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_height="match_parent"
+                android:background="@color/grey_line"
                 android:layout_weight="1"
                 android:text="소속 그룹"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
             <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:textColor="@color/color_b9b9b9"/>
+            <TextView
                 android:layout_width="0dp"
                 android:gravity="center_horizontal|center_vertical"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:background="@color/grey_line"
                 android:text="그룹의 관심사"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
@@ -227,6 +233,102 @@
             android:layout_height="1dp"
             android:background="@color/color_b9b9b9"/>
     </TableLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/table_layout_profile"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_profile_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김푸앙님은"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tv_profile_member_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:text="상위 7%"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:textColor="#100CF2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원이에요"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|bottom">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_star"
+                android:layout_marginEnd="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="미션 수행 음식점 10% 환급"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|bottom">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_star"
+                android:layout_marginEnd="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매달 첫 날 생활용품 쿠폰 2개 제공"
+                android:textSize="20sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="9dp"
+            android:gravity="center_horizontal|bottom">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_star"
+                android:layout_marginEnd="3dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주요 그룹 외 추가 가입 가능"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="혜택 자세히 보기 >>"
+        android:textSize="15sp"
+        android:textColor="@color/grey_text"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
