@@ -5,6 +5,7 @@ import com.example.silver_together.base.BaseActivity
 import com.example.silver_together.databinding.ActivityMainBinding
 import com.example.silver_together.ui.home.HomeFragment
 import com.example.silver_together.ui.mission.MissionTabFragment
+import com.example.silver_together.ui.profile.ProfileFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     override fun initView() {

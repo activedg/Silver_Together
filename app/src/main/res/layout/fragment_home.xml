@@ -200,7 +200,7 @@
                     android:layout_marginEnd="5dp"/>
                 <TextView
                     android:id="@+id/tv_home_mission1"
-                    android:text="까망돌 도서관 방문하기"
+                    android:text="방문: 까망돌 도서관"
                     android:textSize="16sp"
                     android:maxLines="1"
                     android:ellipsize="end"
@@ -225,7 +225,7 @@
                     android:layout_marginEnd="5dp"/>
                 <TextView
                     android:id="@+id/tv_home_mission2"
-                    android:text="예술의 전당 오페라 하우스 관람하기"
+                    android:text="활동: 무료 심리상담"
                     android:textSize="16sp"
                     android:maxLines="1"
                     android:ellipsize="end"
@@ -249,7 +249,7 @@
                     android:layout_marginEnd="5dp"/>
                 <TextView
                     android:id="@+id/tv_home_mission3"
-                    android:text="문화의 날 CGV 용산에서 영화 보기"
+                    android:text="식사: 다래식당"
                     android:textSize="16sp"
                     android:maxLines="1"
                     android:ellipsize="end"
