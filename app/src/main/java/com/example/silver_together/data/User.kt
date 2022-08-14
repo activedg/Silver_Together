@@ -4,5 +4,6 @@ import androidx.annotation.DrawableRes
 
 data class User(
     val name: String,
-    @DrawableRes val imgRes: Int?
+    @DrawableRes val imgRes: Int?,
+    val userType: Int
 )

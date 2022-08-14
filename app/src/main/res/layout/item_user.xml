@@ -23,6 +23,18 @@
         app:layout_constraintStart_toEndOf="@id/iv_item_user_profile"
         app:layout_constraintTop_toTopOf="@id/iv_item_user_profile"
         app:layout_constraintBottom_toBottomOf="@id/iv_item_user_profile"/>
+    <ImageView
+        android:id="@+id/iv_item_user_caution"
+        android:layout_width="35dp"
+        android:layout_height="41dp"
+        android:scaleType="fitXY"
+        android:padding="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_caution"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/tv_item_user_name"
+        app:layout_constraintTop_toTopOf="@id/iv_item_user_profile"
+        app:layout_constraintBottom_toBottomOf="@id/iv_item_user_profile"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

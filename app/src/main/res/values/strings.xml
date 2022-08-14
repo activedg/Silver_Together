@@ -3,4 +3,5 @@
     <string name="visit_tab">"여러분의 방문을 기다리고 있어요!"</string>
     <string name="activity_tab">"팀원들과 다양한 활동을 함께해요!"</string>
     <string name="meal_tab">"오늘, 팀원들과 밥 한끼 어때요?"</string>
+    <string name="group_default">"현재 기본 그룹에 가입되어 있어요.\n관심사가 같은 주변의 그룹을 찾아보세요!</string>
 </resources>
