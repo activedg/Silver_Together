@@ -157,7 +157,7 @@
         app:layout_constraintTop_toTopOf="@id/home_line1">
         <TextView
             android:id="@+id/tv_home_mission_place"
-            android:text="서울 동작구의 미션"
+            android:text="오늘의 미션"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
