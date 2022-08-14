@@ -57,10 +57,10 @@
                 android:text="김푸앙"
                 android:textSize="20sp"
                 android:textColor="@color/white"/>
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/iv_profile_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/ic_profile"
                 android:layout_marginStart="2dp"
                 android:layout_marginEnd="2dp"/>

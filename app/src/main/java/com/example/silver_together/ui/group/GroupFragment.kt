@@ -1,4 +1,4 @@
-package com.example.silver_together.ui
+package com.example.silver_together.ui.group
 
 import android.content.Context
 import android.os.Build
@@ -33,12 +33,12 @@ class GroupFragment : BaseFragment<FragmentGroupBinding>(R.layout.fragment_group
     private fun initDummyData(): ArrayList<User>{
         val tempList = ArrayList<User>()
         tempList.apply {
-            add(User("김민준", null, 1))
-            add(User("송지안", null, 0))
-            add(User("박우진", null, 0))
-            add(User("황지아", null, 0))
-            add(User("김지호", null, 0))
-            add(User("김서연", null, 2))
+            add(User("김민준", R.drawable.ic_profile1, 1))
+            add(User("송지안", R.drawable.ic_profile2, 0))
+            add(User("박우진", R.drawable.ic_profile3, 0))
+            add(User("황지아", R.drawable.ic_profile4, 0))
+            add(User("김지호", R.drawable.ic_profile5, 0))
+            add(User("김서연", R.drawable.ic_profile6, 2))
         }
         return tempList
     }

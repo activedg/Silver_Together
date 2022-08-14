@@ -3,6 +3,7 @@ package com.example.silver_together.ui
 import com.example.silver_together.R
 import com.example.silver_together.base.BaseActivity
 import com.example.silver_together.databinding.ActivityMainBinding
+import com.example.silver_together.ui.group.GroupFragment
 import com.example.silver_together.ui.home.HomeFragment
 import com.example.silver_together.ui.mission.MissionTabFragment
 import com.example.silver_together.ui.profile.ProfileFragment
